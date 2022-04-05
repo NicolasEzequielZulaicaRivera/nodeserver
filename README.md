@@ -2,9 +2,19 @@
 
 ## Running the server
 
-Development: `npm run dev`
+- Development: `npm run dev`
+- Production: `npm start`
+- Production Container: `docker-compose up`
 
-> Default port : `8080`
+### Configuration
+
+- Default port : `8080`
+
+### Docker
+
+- Build : `docker build -t nodeserver .`
+- Run : `docker run -p 8080:8080 nodeserver`
+- Compose: `docker-compose up`
 
 ## Resources
 

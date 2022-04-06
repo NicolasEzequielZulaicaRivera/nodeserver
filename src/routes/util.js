@@ -2,7 +2,7 @@ import { Router } from "express";
 const router = Router();
 
 router.get("/health", async (req, res) => {
-  res.send("OK");
+  res.send("ok");
 });
 
 router.get("/version", async (req, res) => {

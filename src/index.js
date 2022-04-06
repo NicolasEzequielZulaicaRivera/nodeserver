@@ -17,6 +17,8 @@ app.use(express.json());
 app.use("/api/service", service_routes);
 
 // Server
-app.listen(port, () => {
+const server = app.listen(port, () => {
   console.log(`Server on port ${port}`);
 });
+
+export { app, server };

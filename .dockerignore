@@ -3,3 +3,6 @@ node_modules
 
 # OS Metadata
 .DS_Store
+
+# Utils
+coverage

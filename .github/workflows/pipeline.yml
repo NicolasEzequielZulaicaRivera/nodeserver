@@ -1,0 +1,23 @@
+name: Deployment Pipeline
+
+on:
+  push:
+    branches:
+      - "master"
+
+jobs:
+  hello_world:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "17"
+      - name: Install dependencies
+        run: npm install
+      - name: Run Linter
+        run: npm run lint
+      - name: Run Tests
+        run: npm test

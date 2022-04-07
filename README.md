@@ -21,10 +21,7 @@ Documentation will be generated at `{app}/api-docs`
 
 ### Docker
 
-- Build : `npm run docker:build`
-- Run : `npm run docker:run`
-- Compose: `npm run docker:compose`
-  > use this to test the server, port is `8080`
+Run `npm run docker:compose` to start the server on a docker container using port `8080`
 
 ### Workflow - CI/CD
 

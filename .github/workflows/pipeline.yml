@@ -37,6 +37,8 @@ jobs:
         run: npm run test:coverage
       - name: Upload test:coverage
         run: ./node_modules/.bin/codecov --token="${{secrets.CODECOV_TOKEN}}"
+      - name: Copy Dockerfile
+        run: npm run docker:cp-root
       - name: Deploy to heroku
         if: ${{ github.event_name == 'push' }}
         uses: akhileshns/heroku-deploy@v3.12.12 # This is the action

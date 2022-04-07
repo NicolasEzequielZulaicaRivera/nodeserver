@@ -11,9 +11,8 @@
     "test": "NODE_ENV=test jest --verbose --silent",
     "test:coverage": "npm run test -- --coverage",
     "test:watch": "npm run test -- --watch",
-    "docker:build": "docker build -t nzu/nodeserver .",
-    "docker:run": "PORT=8080 docker run -p 8080:8080 nzu/nodeserver",
-    "docker:compose": "PORT=8080 docker-compose up --force-recreate --build"
+    "docker:compose": "PORT=8080 docker-compose -f docker/docker-compose.yml up --force-recreate --build",
+    "docker:cp-root": "cp docker/Dockerfile . && cp docker/.dockerignore ."
   },
   "keywords": [],
   "author": "",

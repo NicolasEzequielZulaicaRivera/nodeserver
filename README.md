@@ -62,6 +62,10 @@ $ heroku authorizations:create
 
 use token from created auth
 
+##### Deploy
+
+- [Deploy to Heroku](https://github.com/marketplace/actions/deploy-to-heroku)
+
 ## Resources
 
 - [Node-Express](https://www.youtube.com/watch?v=-MTSQjw5DrM)

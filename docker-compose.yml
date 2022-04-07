@@ -1,6 +1,7 @@
 version: "3"
 services:
-  nodeserver:
+  nzu-nodeserver:
     build: .
     ports:
-      - 8080:8080
+      - ${PORT}:${PORT}
+      # This HAS to be 8080, because $PORT is not passed to the container

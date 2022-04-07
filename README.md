@@ -21,9 +21,10 @@ Documentation will be generated at `{app}/api-docs`
 
 ### Docker
 
-- Build : `docker build -t nodeserver .`
-- Run : `docker run -p 8080:8080 nodeserver`
-- Compose: `docker-compose up`
+- Build : `npm run docker:build`
+- Run : `npm run docker:run`
+- Compose: `npm run docker:compose`
+  > use this to test the server, port is `8080`
 
 ### Workflow - CI/CD
 

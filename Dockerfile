@@ -8,8 +8,8 @@ RUN npm i
 
 COPY . .
 
-ENV PORT=80
+ENV PORT=$PORT
 
-EXPOSE 80
+EXPOSE $PORT
 
 CMD ["npm", "start"]

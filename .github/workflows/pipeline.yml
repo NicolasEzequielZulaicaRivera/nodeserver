@@ -34,7 +34,9 @@ jobs:
       - name: Run Linter
         run: npm run lint
       - name: Run Tests
-        run: npm test
+        run: npm run test:coverage
+      - name: Upload test:coverage
+        run: ./node_modules/.bin/codecov --token="${{secrets.CODECOV_TOKEN}}"
       - name: Deploy to heroku
         if: ${{ github.event_name == 'push' }}
         uses: akhileshns/heroku-deploy@v3.12.12 # This is the action

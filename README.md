@@ -1,4 +1,4 @@
-[![Pipeline](https://github.com/NicolasEzequielZulaicaRivera/nodeserver/actions/workflows/pipeline.yml/badge.svg?branch=master&event=push)](https://github.com/NicolasEzequielZulaicaRivera/nodeserver/actions/workflows/pipeline.yml) [![codecov](https://codecov.io/gh/NicolasEzequielZulaicaRivera/A3_TP2/branch/master/graph/badge.svg)](https://codecov.io/gh/NicolasEzequielZulaicaRivera/A3_TP2)
+[![Pipeline](https://github.com/NicolasEzequielZulaicaRivera/nodeserver/actions/workflows/pipeline.yml/badge.svg?branch=master&event=push)](https://github.com/NicolasEzequielZulaicaRivera/nodeserver/actions/workflows/pipeline.yml) [![codecov](https://codecov.io/gh/NicolasEzequielZulaicaRivera/nodeserver/branch/master/graph/badge.svg)](https://codecov.io/gh/NicolasEzequielZulaicaRivera/nodeserver)
 
 # Node Server
 
@@ -31,9 +31,19 @@ Documentation will be generated at `{app}/api-docs`
 - Setup ( Checkout Repo , Install Node & Dependencies )
 - Run Linter
 - Run Tests
-- Upload to heroku
+- Upload Test Coverage
+- Deploy to heroku
 
-#### Upload to Heroku
+#### Upload Coverage to Codecov
+
+The pipeline automatically generates a coverage report and uploads it to [codecov](https://codecov.io/gh/NicolasEzequielZulaicaRivera/nodeserver)
+
+You'll need to set the following actions secrets:
+
+- `CODECOV_TOKEN`: Repo Token
+  > Can be obtained on codecov when setting up or on settings
+
+#### Deploy to Heroku
 
 The pipeline deploys the server automatically on pushing to **master**
 

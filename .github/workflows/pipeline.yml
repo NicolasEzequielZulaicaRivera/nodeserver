@@ -45,5 +45,5 @@ jobs:
           heroku_app_name: ${{secrets.HEROKU_NAME}}
           heroku_email: ${{secrets.HEROKU_EMAIL}}
           healthcheck: "https://${{secrets.HEROKU_NAME}}.herokuapp.com/api/health"
-          rollbackonhealthcheckfailed: true
+          rollbackonhealthcheckfailed: false
           usedocker: true

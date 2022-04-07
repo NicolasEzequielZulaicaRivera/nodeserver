@@ -1,4 +1,4 @@
-[![Pipeline](https://github.com/NicolasEzequielZulaicaRivera/nodeserver/actions/workflows/pipeline.yml/badge.svg?branch=master&event=push)](https://github.com/NicolasEzequielZulaicaRivera/nodeserver/actions/workflows/pipeline.yml) [![codecov](https://codecov.io/gh/NicolasEzequielZulaicaRivera/nodeserver/branch/master/graph/badge.svg)](https://codecov.io/gh/NicolasEzequielZulaicaRivera/nodeserver)
+[![Pipeline](https://github.com/NicolasEzequielZulaicaRivera/nodeserver/actions/workflows/pipeline.yml/badge.svg?branch=master)](https://github.com/NicolasEzequielZulaicaRivera/nodeserver/actions/workflows/pipeline.yml) [![codecov](https://codecov.io/gh/NicolasEzequielZulaicaRivera/nodeserver/branch/master/graph/badge.svg)](https://codecov.io/gh/NicolasEzequielZulaicaRivera/nodeserver)
 
 # Node Server
 

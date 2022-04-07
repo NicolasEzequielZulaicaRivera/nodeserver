@@ -41,9 +41,13 @@ jobs:
         if: ${{ github.event_name == 'push' }}
         uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
         with:
+          usedocker: true
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: ${{secrets.HEROKU_NAME}}
           heroku_email: ${{secrets.HEROKU_EMAIL}}
-          # healthcheck: "https://${{secrets.HEROKU_NAME}}.herokuapp.com/api/health"
-          # rollbackonhealthcheckfailed: false
-          usedocker: true
+          healthcheck: "https://${{secrets.HEROKU_NAME}}.herokuapp.com/api/health"
+          rollbackonhealthcheckfailed: true
+          delay: 1.5
+          # healthcheck delay in seconds
+          # check might occur before the app is ready
+          # either wait for healthcheck or remove healthcheck

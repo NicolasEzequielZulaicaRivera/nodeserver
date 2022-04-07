@@ -6,7 +6,7 @@
 
 - Development: `npm run dev`
 - Production: `npm start`
-- Production Container: `docker-compose up`
+- Production Container: `npm run docker:compose`
 
 ### Configuration
 
@@ -18,10 +18,6 @@ Documentation will be generated at `{app}/api-docs`
 
 - Swagger [ [Example](https://petstore.swagger.io/) ]
 - Automatic Documentation [ [Tutorial](https://dev.to/kabartolo/how-to-document-an-express-api-with-swagger-ui-and-jsdoc-50do) ]
-
-### Docker
-
-Run `npm run docker:compose` to start the server on a docker container using port `8080`
 
 ### Workflow - CI/CD
 

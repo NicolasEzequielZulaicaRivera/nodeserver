@@ -16,6 +16,7 @@ jobs:
         uses: styfle/cancel-workflow-action@0.9.1
         with:
           access_token: ${{ github.token }}
+  # This could be parallelized, but it works quite well as it is
   Deploy:
     runs-on: ubuntu-18.04
     steps:
@@ -26,6 +27,7 @@ jobs:
       - name: Install Node
         uses: actions/setup-node@v3
         with:
+          cache: npm
           node-version: "17"
       - name: Install Dependencies
         run: npm ci

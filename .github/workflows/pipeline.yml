@@ -3,8 +3,10 @@ name: Pipeline
 on:
   push:
     branches: [master]
+    paths-ignore: ["**/README.md"]
   pull_request:
     branches: [master]
+    paths-ignore: ["**/README.md"]
     types: [opened, synchronize]
   workflow_dispatch: # Allows manual run
 
@@ -13,7 +15,6 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-
   Install:
     runs-on: ubuntu-18.04
     steps:
@@ -64,7 +65,7 @@ jobs:
     runs-on: ubuntu-18.04
     environment:
       name: Production
-      url: "https://nzu-docker-nodeserver.herokuapp.com/api-docs"
+      url: "https://rostov-nodeserver.herokuapp.com/api-docs"
     steps:
       - uses: actions/checkout@v3
       - name: Copy Dockerfile

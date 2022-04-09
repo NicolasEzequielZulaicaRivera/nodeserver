@@ -62,7 +62,7 @@ jobs:
         run: ./node_modules/.bin/codecov --token="${{secrets.CODECOV_TOKEN}}"
 
   Deploy:
-    if: github.event_name == "push"
+    if: ${{github.event_name}} == "push"
     needs: [Lint, Test]
     runs-on: ubuntu-18.04
     environment:

@@ -62,7 +62,7 @@ jobs:
         run: ./node_modules/.bin/codecov --token="${{secrets.CODECOV_TOKEN}}"
 
   Deploy:
-    if: ${{github.event_name}} == "push"
+    if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
     needs: [Lint, Test]
     runs-on: ubuntu-18.04
     environment:
@@ -73,6 +73,7 @@ jobs:
       - name: Copy Dockerfile
         run: npm run docker:cp-root
       - name: Deploy to heroku
+        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
         uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
         with:
           usedocker: true

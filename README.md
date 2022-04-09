@@ -6,24 +6,18 @@
 
 - Development: `npm run dev`
 - Production: `npm start`
-- Production Container: `docker-compose up`
+- Production Container: `npm run docker:compose`
 
-### Configuration
+> Default port : `8080`
 
-- Default port : `8080`
-
-### Documentation
+## Documentation
 
 Documentation will be generated at `{app}/api-docs`
 
 - Swagger [ [Example](https://petstore.swagger.io/) ]
 - Automatic Documentation [ [Tutorial](https://dev.to/kabartolo/how-to-document-an-express-api-with-swagger-ui-and-jsdoc-50do) ]
 
-### Docker
-
-Run `npm run docker:compose` to start the server on a docker container using port `8080`
-
-### Workflow - CI/CD
+## Workflow - CI/CD
 
 - Cancel Redundant Deploys
 - Setup ( Checkout Repo , Install Node & Dependencies )
@@ -32,7 +26,7 @@ Run `npm run docker:compose` to start the server on a docker container using por
 - Upload Test Coverage
 - Deploy to heroku
 
-#### Upload Coverage to Codecov
+### Upload Coverage to Codecov
 
 The pipeline automatically generates a coverage report and uploads it to [codecov](https://codecov.io/gh/NicolasEzequielZulaicaRivera/nodeserver)
 
@@ -41,7 +35,7 @@ You'll need to set the following actions secrets:
 - `CODECOV_TOKEN`: Repo Token
   > Can be obtained on codecov when setting up or on settings
 
-#### Deploy to Heroku
+### Deploy to Heroku
 
 The pipeline deploys the server automatically on pushing to **master**
 
@@ -62,7 +56,7 @@ $ heroku authorizations:create
 
 use token from created auth
 
-##### Deploy
+#### Deploy
 
 - [Deploy to Heroku](https://github.com/marketplace/actions/deploy-to-heroku)
 

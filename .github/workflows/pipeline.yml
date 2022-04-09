@@ -67,7 +67,7 @@ jobs:
     runs-on: ubuntu-18.04
     environment:
       name: Production
-      url: "https://rostov-nodeserver.herokuapp.com/api-docs"
+      url: "https://nzu-docker-nodeserver.herokuapp.com/api-docs"
     steps:
       - uses: actions/checkout@v3
       - name: Copy Dockerfile
